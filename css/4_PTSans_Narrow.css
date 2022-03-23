@@ -1,0 +1,6 @@
+@font-face {
+	font-family: 'PTSans-Narrow';
+	src: local('O'), url('../fonts/PTSans-Narrow.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}

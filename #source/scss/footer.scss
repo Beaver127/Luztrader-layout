@@ -1,0 +1,192 @@
+.footer {
+	padding: 49px 0 50px 0;
+	background-color: #1c242a;
+	&__row {
+		@include flexbox();
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+	&__column {
+	}
+}
+.footer-logo {
+	flex: 0 0 30%;
+		@media (max-width:550px){
+		flex: 0 1 50%;
+		}
+	&__logo {
+		a {
+			color: #bb9c66;
+			font-family: 'Harbell_Personal_Use';
+			font-size: 32px;
+			line-height: 21px;
+			
+		}
+		margin: 0px 0px 35px 0px;
+		@media (max-width:992px){
+			margin: 0px 0px 20px 0px;
+			font-size: 25px;
+		}
+	}
+	&__copyright {
+		color: #bb9c66;
+		font-family: "PTSans";
+		font-size: 14px;
+		line-height: 21px;
+		@media (max-width:992px){
+			font-size: 12px;
+		}
+		@media (max-width:330px){
+			font-size: 10px;
+		}
+	}
+}
+.footer-links {
+	@include flexorder(0);
+	margin: 0;
+	flex: 0 1 40%;
+	@media (max-width: 992px){
+		margin: 0;
+		text-align: center;
+	}
+	@media (max-width:675px){
+		flex: 0 1 20%;
+	}
+	@media (max-width:550px){
+		margin: 30px 0 0 0;
+		flex: 1 0 80%;
+		@include flexorder(1);
+	}
+	&__title {
+		display: none;
+		@media (max-width:768px){
+				display: block;
+				color: #ffffff;
+				position: relative;
+		&:after {
+			content: "";
+			position: relative;
+		    border: solid #fff;
+		    border-width: 0px 1px 1px 0;
+		    padding: 5px;
+		    top: -7px;
+		    right: -10px;
+		    display: inline-block;
+		    transform: rotate(45deg);
+		    @include anim(0.3s,0s);
+		    @media (max-width:685px){
+		    	top: -3px;
+		    }
+		}
+		&_active {
+			&:after {
+				transform: rotate(-135deg);
+				top: 0px;
+			}
+		}
+		}
+	}
+	&__list {
+		@media (max-width:768px){
+		max-width: 100px;
+		margin: 30px auto 0 auto;
+		display: none;
+		}
+			li {
+			display: inline-block;
+			margin: 0px 10px 0px 0px;
+		}
+	}
+	&__link {
+	color: #ffffff;
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 25px;
+	text-transform: uppercase;
+	letter-spacing: 1.4px;
+	background-image: linear-gradient(#bb9c66 50%, #bb9c66 50%), linear-gradient(transparent 50%, transparent 50%); 
+	background-position: center bottom; 
+	background-repeat: no-repeat; 
+	background-size: 0 2px, 100% 2px; 
+	padding-bottom: 3px; 
+	transition: .5s ease-in-out;
+&:hover {
+	background-size: 100% 2px, 100% 2px;
+	color: #bb9c66;
+}
+	}
+}
+.footer-contacts {
+	flex: 0 0 30%;
+	@media (max-width:675px){
+		flex: 0 1 40%;
+	}
+	@media (max-width:550px){
+		flex: 0 1 50%;
+	}
+	text-align: right;
+	&__phone {
+			display: inline-block;
+			margin: 0px 0px 7px 0px;
+			color: #bb9c66;
+			font-family: 'BravoRG';
+			font-size: 50px;
+			line-height: 25px;
+			text-transform: uppercase;
+			&:hover &_s {
+				@include rotate(360deg);
+			}
+			&_s {
+				display: inline-block;
+				@include anim(1s,0s);
+				position: relative;
+				top: -17px;
+				font-size: 25px;
+				@media (max-width:992px){
+					font-size: 20px;
+				}
+				@media (max-width:415px){
+				font-size: 15px;
+				}
+				@media (max-width:371px){
+				top: -13.5px;
+				}
+				@media (max-width:331px){
+				top: -9px;
+				}
+			}
+			@media (max-width:992px){
+				font-size: 45px;
+			}
+			@media (max-width:415px){
+				font-size: 40px;
+			}
+			@media (max-width:371px){
+				font-size: 35px;
+			}
+			@media (max-width:331px){
+				font-size: 30px;
+			}
+	}
+	&__contactslink {
+		display: inline-block;
+		color: #bb9c66;
+		font-family: "PTSans";
+		font-size: 14px;
+		line-height: 21px;
+  		position: relative;
+		&:after {
+			  content: "";
+			  display: block;
+			  position: relative;
+			  width: 100%;
+			  margin: auto;
+			  border-bottom: 1px dashed #bb9c66;
+			  bottom: -1px;
+			  transition: .5s ease-in-out;
+		}
+		&:hover:after {
+			width: 0;
+		}
+	}
+}

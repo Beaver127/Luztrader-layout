@@ -1,0 +1,108 @@
+//<ОСНОВНОЙ БЛОК>====================================================================================================
+.title {
+		text-align: center;
+		font-family: 'Ceremonious';
+		font-size: 40px;
+		line-height: 25px;
+		color: #bb9c66;
+		@media(max-width: 600px) {
+		font-size: 30px;
+		}
+}
+.subtitle {
+		text-align: center;
+		font-size: 35px;
+		line-height: 35px;
+		text-transform: uppercase;
+		letter-spacing: 0.15em;
+		color: #ffffff;
+		@media(max-width: 800px) {
+			font-size:30px;
+			line-height: 30px;
+		}
+		@media(max-width: 685px) {
+			font-size:25px;
+			line-height: 25px;
+		}
+		@media(max-width: 685px) {
+			font-size:20px;
+			line-height: 20px;
+		}
+}
+
+
+// LINE
+
+.firstl {
+		height: 1px;
+		background-color: #bb9c66;
+		flex: 0 1 35.264%;
+		@media (max-width:992px){
+			flex: 0 1 30%;
+		}
+		@media (max-width:500px){
+			flex: 0 1 auto;
+		}
+}
+.circle {
+		height: 9px;
+		width: 9px;
+		border: 1px solid #c4aa7b;
+		border-radius: 50%;
+}
+.rectangle {
+		width: 15px;
+		height: 15px;
+		border: 1px solid #c4aa7b;
+		@include rotate(45deg);
+		@media (max-width:720px){
+			width: 7.5px;
+			height: 7.5px;
+		}
+}
+.brectangle {
+		width: 25px;
+		height: 25px;
+		border: 1px solid #c4aa7b;
+		@include rotate(45deg);
+		position: relative;
+		top:0.5px;
+		@media (max-width:720px){
+			width: 12.5px;
+			height: 12.5px;
+		}
+}
+
+
+//</ОСНОВНОЙ БЛОК>====================================================================================================
+
+
+
+//<ГОТОВЫЕ КЛАССЫ>====================================================================================================
+.row:after{display: block;content: '';clear: both;}
+.rub:after{content:'₽';}
+//====================================================================================================
+.noselect{-webkit-touch-callout: none;-webkit-user-select: none;-khtml-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;}
+//====================================================================================================
+ol.counter{list-style-type: none;counter-reset:item;
+	li{position: relative;padding: 0px 0px 0px 45px;
+		&:before{counter-increment:item;content:counter(item);position:absolute;left:0;top:0;color:#818181;font-size:14px;font-weight:700;text-align:center;line-height:26px;border-radius:50%;width:28px;height:28px;border:1px solid #4274bb;}
+	}
+}
+.ibg{background-position: center;background-size: cover;background-repeat: no-repeat;
+	img{display: none;}
+}
+.slick-slider{position: relative;
+	.slick-track,.slick-list {-webkit-transform: translate3d(0, 0, 0);-moz-transform: translate3d(0, 0, 0);-ms-transform: translate3d(0, 0, 0);-o-transform: translate3d(0, 0, 0);transform: translate3d(0, 0, 0);}
+	.slick-list{position: relative;overflow: hidden;width: 100%;}
+	.slick-track{position: relative;width: 100%;}
+	.slick-slide{overflow: hidden;float: left;position: relative;}
+	.slick-dots{
+		li{
+			button{}
+			&.slick-active{
+				button{}
+			}
+		}
+	}
+}

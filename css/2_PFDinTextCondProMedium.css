@@ -1,0 +1,6 @@
+@font-face {
+	font-family: 'PFDinTextCondPro';
+	src: local('O'), url('../fonts/PFDinTextCondPro-Medium.woff');
+	font-weight: 500;
+	font-style: normal;
+}
